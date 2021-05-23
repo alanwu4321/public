@@ -1,0 +1,1 @@
+(self.webpackChunkca_docs=self.webpackChunkca_docs||[]).push([[915],{1797:function(a){"use strict";a.exports=JSON.parse('{"allTagsPath":"/public/en/blog/tags","slug":"admin","name":"admin","count":1,"permalink":"/public/en/blog/tags/admin"}')}}]);
