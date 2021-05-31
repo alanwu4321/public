@@ -1,1 +1,0 @@
-(self.webpackChunkca_docs=self.webpackChunkca_docs||[]).push([[601],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome \ud83d\udc4b","permalink":"/public/blog/welcome"}]}')}}]);
