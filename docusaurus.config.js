@@ -237,17 +237,12 @@ module.exports = {
         //   anonymizeIP: false, // Should IPs be anonymized?
         // },
         googleTagManager: {
-          containerId: 'GTM-PCN7GP4',
+          containerId: 'GTM-NHPXBQ8',
         },
         gtag: {
-          trackingID: 'G-5N286KBJH8',
-          anonymizeIP: false,
-        },
-        googleAnalytics: {
           // https://analytics.google.com/analytics/web/?authuser=4#/a116533747p276081142/admin/streams/table/2657234844
           trackingID: 'G-5N286KBJH8',
-          // Optional fields.
-          anonymizeIP: false, // Should IPs be anonymized?
+          anonymizeIP: false,
         },
       },
     ],
