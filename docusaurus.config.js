@@ -20,13 +20,15 @@ module.exports = {
         disableInDev: false,
       },
     ],
-    async function myPlugin(context, options) {
+    async function tailwindPlugin(context, options) {
       return {
-        name: "docusaurus-tailwindcss",
+        name: 'tailwind-plugin',
         configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
+          postcssOptions.plugins = [
+            require('postcss-import'),
+            require('tailwindcss'),
+            require('autoprefixer'),
+          ];
           return postcssOptions;
         },
       };
@@ -47,17 +49,30 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    // announcementBar: {
+    //   id: 'support_us',
+    //   content:
+    //     'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+    //   backgroundColor: '#fafbfc',
+    //   textColor: '#091E42',
+    //   isCloseable: false,
+    // },
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     tableOfContents: {
-      minHeadingLevel: 2,
+      minHeadingLevel: 3,
       maxHeadingLevel: 5,
     },
     docs: {
       sidebar: {
-        hideable: true
+        hideable: false
       }
     },
     navbar: {
-      // style: 'dark',
+      style: 'dark',
       title: 'Crypto Arsenal',
       logo: {
         alt: 'My Site Logo',
@@ -87,24 +102,24 @@ module.exports = {
           sidebarId: 'trader',
           label: 'Trader 🤖',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/blog', label: 'Blog ✍️', position: 'left' },
         // {
         //   href: 'https://help.crypto-arsenal.io/en/',
         //   label: 'Help',
         //   position: 'left',
         // },
         {
-          href: 'https://status.crypto-arsenal.io/',
-          label: 'Status',
-          position: 'left',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
         {
           href: 'https://crypto-arsenal.io/',
-          label: 'Dashboard',
+          label: 'App',
+          position: 'right',
+        },
+        {
+          href: 'https://status.crypto-arsenal.io/',
+          label: 'Status',
           position: 'right',
         },
       ],
@@ -164,7 +179,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Crypto Arsenal, Inc. Built with ❤️`,
+      copyright: `Copyright © ${new Date().getFullYear()} Crypto Arsenal, Inc. Built with ❤️ & ☕`,
     },
   },
   i18n: {

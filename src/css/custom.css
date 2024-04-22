@@ -6,7 +6,7 @@
  */
 
 /* You can override the default Infima variables here. */
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -21,9 +21,35 @@
   --ifm-code-font-size: 95%;
 }
 
+/* Adjusting to an even lighter palette for enhanced readability in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #8a9aff; /* Further Lightened */
+  --ifm-color-primary-dark: #6ca6ff; /* Further Lightened */
+  --ifm-color-primary-darker: #4eb2ff; /* Further Lightened */
+  --ifm-color-primary-darkest: #30beff; /* Further Lightened */
+  --ifm-color-primary-light: #92cfff; /* Further Lightened */
+  --ifm-color-primary-lighter: #b4e1ff; /* Further Lightened */
+  --ifm-color-primary-lightest: #d6f3ff; /* Further Lightened */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.2); /* Further Lightened */
+}
+
+.navbar{
+  background-color: #1c1c1d;
+}
+
+.footer--dark {
+  background-color: #1c1c1d;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+
+p {
+  margin: 0 0 ;
 }
