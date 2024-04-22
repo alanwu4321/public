@@ -76,10 +76,10 @@ export function AuroraBackgroundDemo() {
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       > */}
             <div className="flex flex-col gap-4 items-center justify-center px-4">
-              <div className="text-6xl md:text-7xl font-bold dark:text-white text-center z-20">
+              <div className="text-5xl md:text-6xl font-bold dark:text-white text-center z-20">
                 Automate your Crypto Trading
               </div>
-              <div className="font-extralight md:text-4xl text-2xl dark:text-neutral-200 py-4 z-20 text-center">
+              <div className="font-extralight md:text-3xl text-xl dark:text-neutral-200 py-4 z-20 text-center">
                 API docs, Tutorials, and Technical blogs
               </div>
               <div className="flex flex-col items-center md:flex-row justify-center md:space-x-4 space-y-4 md:space-y-0 mt-5 align-center z-20">
