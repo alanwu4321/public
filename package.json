@@ -16,6 +16,7 @@
   "dependencies": {
     "@docusaurus/core": "^3.2.1",
     "@docusaurus/plugin-ideal-image": "^3.2.1",
+    "@docusaurus/plugin-vercel-analytics": "^3.2.1",
     "@docusaurus/preset-classic": "^3.2.1",
     "@easyops-cn/docusaurus-search-local": "latest",
     "@mdx-js/react": "^3.0.0",

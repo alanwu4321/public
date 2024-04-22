@@ -11,6 +11,13 @@ module.exports = {
   projectName: 'public', // Usually your repo name.
   plugins: [
     [
+      'vercel-analytics',
+      {
+        debug: true,
+        mode: 'auto',
+      },
+    ],
+    [
       '@docusaurus/plugin-ideal-image',
       {
         quality: 70,
