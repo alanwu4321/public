@@ -77,7 +77,7 @@ export function AuroraBackgroundDemo() {
       > */}
             <div className="flex flex-col gap-4 items-center justify-center px-4">
               <div className="text-6xl md:text-7xl font-bold dark:text-white text-center z-20">
-                Automate your Trading
+                Automate your Crypto Trading
               </div>
               <div className="font-extralight md:text-4xl text-2xl dark:text-neutral-200 py-4 z-20 text-center">
                 API docs, Tutorials, and Technical blogs
@@ -102,7 +102,7 @@ export function AuroraBackgroundDemo() {
             {/* </motion.div> */}
           </div>
         </AuroraBackground>
-        <div className="z-30 px-7 md:px-2 bg-[#18181c]">
+        <div className="z-30 px-7 md:px-2 bg-[#18181c] pb-14">
           <BentoGridThirdDemo />
         </div>
       </div>
