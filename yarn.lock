@@ -2488,7 +2488,7 @@
     "@types/gtag.js" "^0.0.12"
     tslib "^2.6.0"
 
-"@docusaurus/plugin-google-tag-manager@3.2.1":
+"@docusaurus/plugin-google-tag-manager@3.2.1", "@docusaurus/plugin-google-tag-manager@^3.2.1":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-google-tag-manager/-/plugin-google-tag-manager-3.2.1.tgz#8b38237c154a377f6e199b77ecc871c6c6bb41a4"
   integrity sha512-wiS/kE0Ny5pnjTxVCs8ljRnkL1RVMj59t6jmSsgEX7piDOoaXSMIUaoIt9ogS/v132uO0xEsxHstkRUZHQyPcQ==

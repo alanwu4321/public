@@ -230,11 +230,14 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag: {
-          // You can also use your "G-" Measurement ID here.
-          trackingID: 'G-JRERR47R34',
-          // Optional fields.
-          anonymizeIP: false, // Should IPs be anonymized?
+        // gtag: {
+        //   // You can also use your "G-" Measurement ID here.
+        //   trackingID: 'GTM-PZN79QW5',
+        //   // Optional fields.
+        //   anonymizeIP: false, // Should IPs be anonymized?
+        // },
+        googleTagManager: {
+          containerId: 'GTM-PZN79QW5',
         },
         googleAnalytics: {
           trackingID: 'G-JRERR47R34',
