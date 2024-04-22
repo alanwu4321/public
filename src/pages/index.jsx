@@ -63,7 +63,7 @@ export function AuroraBackgroundDemo() {
         {/* <div className=" w-full relative max-w-xs"> */}
         {/* <Boxes className="z-10"/> */}
 
-        <AuroraBackground className="max-h-[50vh]">
+        <AuroraBackground className="md:h-[75vh]">
           <div className="flex flex-col items-center justify-center">
             {/* <motion.div
         initial={{ opacity: 0.0, y: 40 }}
@@ -102,7 +102,7 @@ export function AuroraBackgroundDemo() {
             {/* </motion.div> */}
           </div>
         </AuroraBackground>
-        <div className="z-30 py-12 px-7 md:px-2 bg-[#18181c]">
+        <div className="z-30 px-7 md:px-2 bg-[#18181c]">
           <BentoGridThirdDemo />
         </div>
       </div>
