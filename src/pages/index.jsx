@@ -63,7 +63,7 @@ export function AuroraBackgroundDemo() {
         {/* <div className=" w-full relative max-w-xs"> */}
         {/* <Boxes className="z-10"/> */}
 
-        <AuroraBackground className="md:h-[75vh]">
+        <AuroraBackground className="md:h-[50vh]">
           <div className="flex flex-col items-center justify-center">
             {/* <motion.div
         initial={{ opacity: 0.0, y: 40 }}
@@ -89,7 +89,10 @@ export function AuroraBackgroundDemo() {
                   </HoverBorderGradient>{" "}
                 </Link>
                 <Link to="/docs/category/get-started">
-                  <HoverBorderGradient className="text-lg cursor-pointer z-30">
+                  <HoverBorderGradient
+                    className="text-lg cursor-pointer z-30 bg-white opacity-90 text-black"
+                    containerClassName="bg-white"
+                  >
                     I want to use Trading Bots 🤖
                   </HoverBorderGradient>{" "}
                 </Link>
