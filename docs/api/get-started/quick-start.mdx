@@ -1,0 +1,365 @@
+---
+sidebar_position: 1
+sidebar_label: Quick Start
+hide_title: false
+title: Get Started
+description: Get Started with API Signal Trading
+tags:
+  - api
+---
+
+import IdealImage from "@theme/IdealImage";
+
+# Quick Start
+
+### Get Started with Sending Signal
+
+```sh title="Webhook URL"
+https://api.crypto-arsenal.io/trading-signal/webhook
+```
+
+<Tabs groupId="payload" queryString>
+
+<TabItem value="python" label="Python">
+```python title="your-strategy.py" showLineNumbers
+import requests
+
+URL = 'https://api.crypto-arsenal.io/trading-signal/webhook'
+PAYLOAD = {
+"connectorName": "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+"connectorToken": "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+"log": "OPEN LONG on BTC/USDT at $1200",
+
+# ...whatever you would like to send to us :)
+
+}
+
+response = requests.post(URL, json=PAYLOAD)
+
+````
+
+</TabItem>
+  <TabItem value="json" label="JSON">
+```js  title="JSON" showLineNumbers
+{
+  connectorName: "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+  connectorToken: "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+  log: "OPEN LONG on BTC/USDT at $1200",
+  // ...whatever you would like to send to us :)
+}
+````
+
+  </TabItem>
+
+  <TabItem value="NodeJS" label="NodeJS">
+
+```sh title="bash"
+ npm install axios
+```
+
+```js title="your-strategy.js" showLineNumbers
+const axios = require("axios");
+
+const URL = "https://api.crypto-arsenal.io/trading-signal/webhook";
+const PAYLOAD = {
+  connectorName: "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+  connectorToken: "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+  log: "OPEN LONG on BTC/USDT at $1200",
+  // Add any other properties you wish to send
+};
+
+axios
+  .post(URL, PAYLOAD)
+  .then((response) => {
+    console.log("Response:", response.data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+```
+
+  </TabItem>
+
+  <TabItem value="Golang" label="Golang">
+
+```go title="your-strategy.go" showLineNumbers
+package main
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
+
+func main() {
+	url := "https://api.crypto-arsenal.io/trading-signal/webhook"
+	payload := map[string]interface{}{
+		"connectorName": "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+		"connectorToken": "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+		"log": "OPEN LONG on BTC/USDT at $1200",
+		// Add any other properties you wish to send
+	}
+
+	jsonData, err := json.Marshal(payload)
+	if err != nil {
+		fmt.Println("Error encoding JSON:", err)
+		return
+	}
+
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
+	if err != nil {
+		fmt.Println("Error making POST request:", err)
+		return
+	}
+	defer resp.Body.Close()
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Println("Error reading response body:", err)
+		return
+	}
+
+	fmt.Println("Response:", string(body))
+}
+```
+
+  </TabItem>
+
+  <TabItem value="Rust" label="Rust">
+
+```yaml title="Cargo.toml"
+[package]
+name = "your-strategy"
+version = "0.1.0"
+
+[dependencies]
+reqwest = "0.11.10"
+serde_json = "1.1.10"
+tokio = "1.21.1"
+```
+
+```rust title="your-strategy.rs" showLineNumbers
+use reqwest::Client;
+use serde_json::json;
+use tokio;
+
+#[tokio::main]
+async fn main() {
+    let url = "https://api.crypto-arsenal.io/trading-signal/webhook";
+    let client = Client::new();
+
+    let payload = json!({
+        "connectorName": "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+        "connectorToken": "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+        "log": "OPEN LONG on BTC/USDT at $1200",
+        // Add any other properties you wish to send
+    });
+
+    match client.post(url)
+        .json(&payload)
+        .send()
+        .await {
+        Ok(response) => {
+            if response.status().is_success() {
+                match response.text().await {
+                    Ok(text) => println!("Response: {}", text),
+                    Err(err) => eprintln!("Failed to read response text: {}", err),
+                }
+            } else {
+                eprintln!("Received non-success status code: {}", response.status());
+            }
+        },
+        Err(err) => eprintln!("Failed to send request: {}", err),
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="C++" label="C++">
+
+```sh title="For Ubuntu/Debian"
+sudo apt-get install libcurl4-openssl-dev
+```
+
+```cpp title="your-strategy.cpp"
+#include <iostream>
+#include <string>
+#include <curl/curl.h>
+
+int main() {
+    CURL *curl;
+    CURLcode res;
+
+    std::string data = R"({"connectorName": "FIND_ME_ON_CA_STRATEGY_CONNECTOR", "connectorToken": "FIND_ME_ON_CA_STRATEGY_CONNECTOR", "log": "OPEN LONG on BTC/USDT at $1200"})";
+
+    curl_global_init(CURL_GLOBAL_ALL);
+    curl = curl_easy_init();
+
+    if(curl) {
+        struct curl_slist *headers = NULL;
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.crypto-arsenal.io/trading-signal/webhook");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
+
+        res = curl_easy_perform(curl);
+
+        if(res != CURLE_OK) {
+            std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << std::endl;
+        }
+
+        curl_easy_cleanup(curl);
+        curl_slist_free_all(headers);
+    }
+
+    curl_global_cleanup();
+    return 0;
+}
+```
+
+```sh title="Bash"
+g++ -o post_request post_request.cpp -lcurl
+./post_request
+```
+
+  </TabItem>
+
+   <TabItem value="C" label="C">
+
+```sh title="Linux"
+sudo apt-get install libcurl4-openssl-dev
+```
+
+```c title="your-strategy.c"
+
+#include <stdio.h>
+#include <string.h>
+#include <curl/curl.h>
+
+int main(void) {
+    CURL *curl;
+    CURLcode res;
+
+    // JSON data to send
+    char *data = "{\"connectorName\": \"FIND_ME_ON_CA_STRATEGY_CONNECTOR\", \"connectorToken\": \"FIND_ME_ON_CA_STRATEGY_CONNECTOR\", \"log\": \"OPEN LONG on BTC/USDT at $1200\"}";
+
+    // Initialize a curl session
+    curl = curl_easy_init();
+    if(curl) {
+        // Set the URL that receives the POST data
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.crypto-arsenal.io/trading-signal/webhook");
+
+        // Set the content type header
+        struct curl_slist *headers = NULL;
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+
+        // Set the POST data
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);
+
+        // Perform the request, res will get the return code
+        res = curl_easy_perform(curl);
+
+        // Check for errors
+        if(res != CURLE_OK)
+            fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
+
+        // Cleanup
+        curl_easy_cleanup(curl);
+        curl_slist_free_all(headers);
+    }
+
+    return 0;
+}
+```
+
+```sh title="Bash"
+gcc -o post_request post_request.c -lcurl
+./post_request
+```
+
+  </TabItem>
+
+  <TabItem value="PHP" label="PHP">
+
+```php title="your-strategy.php"
+
+<?php
+
+$url = 'https://api.crypto-arsenal.io/trading-signal/webhook';
+$payload = array(
+    "connectorName" => "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+    "connectorToken" => "FIND_ME_ON_CA_STRATEGY_CONNECTOR",
+    "log" => "OPEN LONG on BTC/USDT at $1200",
+    // Add any other properties you wish to send
+);
+
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
+
+$response = curl_exec($ch);
+
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+} else {
+    echo 'Response:' . $response;
+}
+
+curl_close($ch);
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip
+
+You can send us custom JSON payload and process them in the Python editor
+:::
+
+### Common Q&A
+
+#### Q: What is the webhook URL?
+
+The webhook URL is `https://api.crypto-arsenal.io/trading-signal/webhook`. You will need to send your signal via a POST request to this URL with the [JSON payload](#example-payload).
+
+<hr />
+
+#### Q: What are `connectorName` and `connectorToken`?
+
+The `connectorName` and `connectorToken` uniquely identify and link the signal you send to a specific strategy on Crypto-Arsenal. Each pair has a one-to-one correspondence with a strategy. You can locate these details within your strategy's editor on Crypto-Arsenal.
+
+<!-- <div className="container flex justify-center">
+  ![An image from the
+  static](/img/developer/tradingview/2023-06-23-15-33-01.png)
+</div> -->
+
+<Image src="/img/api/connector.png" />
+
+<hr />
+
+#### Q: How can I process customized signal? (Advanced)
+
+You can send any custom JSON payload to the webhook URL. The payload will be processed in the Python editor that is where your strategy lives.
+
+Each time a signal is received from the webhook, the `on_tradingview_signal` callback is invoked with the signal's JSON data and the most recent candle data. This class and function is stateful, allowing for the maintenance of state across signals.
+
+```py title="your-crypto-arsenal-strategy.py" showLineNumbers
+#...
+    def on_tradingview_signal(self, signal, candles):
+        exchange, pair, base, quote = CA.get_exchange_pair()
+
+        # will print out exactly the signal you sent to the webhook
+        CA.log('on_tradingview_signal: ' + str(signal))
+
+        if signal.get('action') == 'open_long':
+            CA.open_long(exchange, pair, signal.get('amount'), CA.OrderType.MARKET)
+#...
+```
+
+<hr />

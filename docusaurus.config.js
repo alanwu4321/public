@@ -101,6 +101,11 @@ module.exports = {
               sidebarId: 'tradingview',
               label: 'TradingView 🔭',
             },
+            {
+              type: 'docSidebar',
+              sidebarId: 'api',
+              label: 'API 🤖',
+            },
           ]
         },
         {

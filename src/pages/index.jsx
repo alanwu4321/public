@@ -11,6 +11,7 @@ import { AuroraBackground } from "../components/ui/aurora-background";
 // import { Meteors } from "../components/ui/meteor-card";
 // import { Boxes } from "../components/ui/background-boxes";
 import { BentoGridThirdDemo } from "../components/feature-layout";
+// import { GoogleGeminiEffectDemo } from "../components/gemini";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -54,7 +55,7 @@ function HomepageHeader() {
   );
 }
 
-export function AuroraBackgroundDemo() {
+export function LandingHero() {
   return (
     <div className="">
       {/* <Meteors number={5} /> */}
@@ -97,6 +98,9 @@ export function AuroraBackgroundDemo() {
                   </HoverBorderGradient>{" "}
                 </Link>
               </div>
+              {/* <div className="font-underline font-extralight md:text-md text-md   z-20 text-center">
+                <Link> API docs, Tutorials, and Technical blogs </Link>
+              </div> */}
             </div>
 
             {/* <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2 z-20">
@@ -117,7 +121,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout>
-      <AuroraBackgroundDemo />
+      <LandingHero />
+      {/* <GoogleGeminiEffectDemo /> */}
     </Layout>
   );
 }
