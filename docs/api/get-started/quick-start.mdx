@@ -38,7 +38,9 @@ response = requests.post(URL, json=PAYLOAD)
 
 ````
 
-</TabItem>
+  </TabItem>
+
+
   <TabItem value="json" label="JSON">
 ```js  title="JSON" showLineNumbers
 {
@@ -79,7 +81,58 @@ axios
 ```
 
   </TabItem>
+  <TabItem value="Java" label="Java">
 
+```xml title="pom.xml"
+<!-- Add this to your pom.xml -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20210307</version>
+</dependency>
+```
+
+```java title="your-strategy.java" showLineNumbers
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse.BodyHandlers;
+import org.json.JSONObject;
+
+public class WebhookClient {
+    public static void main(String[] args) {
+        String url = "https://api.crypto-arsenal.io/trading-signal/webhook";
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Create JSON payload
+        JSONObject payload = new JSONObject();
+        payload.put("connectorName", "FIND_ME_ON_CA_STRATEGY_CONNECTOR");
+        payload.put("connectorToken", "FIND_ME_ON_CA_STRATEGY_CONNECTOR");
+        payload.put("log", "OPEN LONG on BTC/USDT at $1200");
+        // Add any other properties you wish to send
+
+        // Create request
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(url))
+            .header("Content-Type", "application/json")
+            .POST(BodyPublishers.ofString(payload.toString()))
+            .build();
+
+        // Send request and get response
+        try {
+            HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+            System.out.println("Response status code: " + response.statusCode());
+            System.out.println("Response body: " + response.body());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+  </TabItem>
   <TabItem value="Golang" label="Golang">
 
 ```go title="your-strategy.go" showLineNumbers
