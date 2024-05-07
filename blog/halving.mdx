@@ -21,7 +21,7 @@ tags: [general, btc]
 
 Bitcoin halving, occurring every 210,000 blocks—or approximately every four years—cuts the block reward for miners in half. This scheduled event is a critical mechanism coded in the protocol ([Github](https://github.com/bitcoin/bitcoin/blob/c05c214f2e9cfd6070a3c7680bfa09358fd9d97a/src/validation.cpp#L1752-L1763)).
 
-```cpp
+```cpp title="bitcoin/src/validation.cpp"
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
@@ -99,7 +99,7 @@ Post-halving, the cost of mining Bitcoin is expected to increase significantly, 
 
 **Changing Seller Dynamics**: The reduction in miner output will decrease the availability of Bitcoin from forced sellers (who are insensitive towards to selling price as miners always sell a portion of their block rewards for fiat to pay for operational expenses like energy, labor, debt, and new machines), thereby increasing reliance on willing sellers who may demand higher prices, leading to potential market volatility or upward buying pressure, as analyzed by **Bitwise** ([Bitwise Insights](https://experts.bitwiseinvestments.com/cio-memos/the-bitcoin-halving-the-real-change-no-one-is-talking-about)).
 
-## Traders **and Market Dynamics**
+## **Traders and Market Dynamics**
 
 **Futures Traders:**
 

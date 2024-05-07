@@ -70,7 +70,7 @@ module.exports = {
       respectPrefersColorScheme: false,
     },
     tableOfContents: {
-      minHeadingLevel: 3,
+      minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
     docs: {
