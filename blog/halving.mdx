@@ -1,0 +1,134 @@
+---
+slug: post-btc-halving-2024
+title: "Bitcoin Halving 2024 Just Landed: Why This Time Is Different"
+author: Alan Wu
+author_title: CTO & Co-Founder @ Crypto Arsenal
+author_url: https://github.com/alanwu4321
+author_image_url: https://avatars.githubusercontent.com/u/41980722?v=4
+hide_table_of_contents: false
+tags: [general, btc]
+---
+
+# Bitcoin Halving 2024 Just Landed: Why This Time Is Different
+
+<br />{" "}
+
+> With insights from giants in financial analysis and Web3 insight such as _Goldman Sachs, BlackRock, Fidelity, Greyscale, Coinbase…etc_ this article delves into how the forthcoming halving could differ markedly from past events. We will explore an array of modern-day factors — ranging from **monetary policies, demographic shifts,** and **geopolitical tensions,** to the evolving roles of **ETFs, miners, and holders** — that are reshaping the **supply and demand dynamics** of Bitcoin.
+
+### **Understanding Bitcoin Halving**
+
+#### **What is Bitcoin Halving, and Why Does Bitcoin Need It?**
+
+Bitcoin halving, occurring every 210,000 blocks—or approximately every four years—cuts the block reward for miners in half. This scheduled event is a critical mechanism coded in the protocol ([Github](https://github.com/bitcoin/bitcoin/blob/c05c214f2e9cfd6070a3c7680bfa09358fd9d97a/src/validation.cpp#L1752-L1763)).
+
+```cpp
+CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
+{
+    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+    // Force block reward to zero when right shift is undefined.
+    if (halvings >= 64)
+        return 0;
+
+
+    CAmount nSubsidy = 50 * COIN;
+    // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
+    nSubsidy >>= halvings;
+    return nSubsidy;
+}
+```
+
+Bitcoin Halving is designed to control Bitcoin's inflation and maintain its long-term value by limiting the supply, much like precious metals.
+
+> “_The root problem with conventional currency is all the trust that's required to make it work. The central bank must be trusted not to debase the currency, but the history of fiat currencies is full of breaches of that trust_.” - [Satoshi Nakamoto 2009](https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source)
+
+#### **Impact of Halving on Bitcoin's Price Dynamics**
+
+Historically, halvings have led to a reduction in the supply of new bitcoins as rewards decrease, creating potential upward pressure on prices if demand remains steady or increases. Historical data supports significant price increases post-halving, highlighting the importance of this event in Bitcoin's market dynamics.
+
+## **Historical Context and Its Limitations**
+
+#### **Historical Price Changes Post-Halving**
+
+- **2012 Halving:** Year after: +8,839%; Month after: +9%
+
+- **2016 Halving:** Year after: +285%; Month after: -10%
+
+- **2020 Halving:** Year after: +548%; Month after: +6%
+
+These statistics illustrate that while the market tends to focus on short-term impacts, it often underestimates the long-term effects of halvings, as noted by _[Bitwise](https://x.com/BitwiseInvest/status/1780256503766688053)_.
+
+Although these statistics highlight significant post-halving price increases, relying solely on historical data can be misleading. Financial giants such as *[Goldman Sachs](https://www.coindesk.com/markets/2024/04/17/goldman-cautions-against-extrapolating-previous-bitcoin-halving-cycles-for-price-predictions/#:~:text=Investment%20banking%20giant%20Goldman%20Sachs,all%2Dtime%20highs%20differs%20significantly) *and* [BlackRock](https://www.ishares.com/us/insights/what-is-the-bitcoin-halving)* advise against depending exclusively on past halving patterns as they consider them unreliable indicators for future performance and should consider more macro and long-term factors.
+
+## **New Factors Influencing This Halving**
+
+**1. Fiscal and Monetary Policies:**
+
+The U.S.’s rising fiscal deficit and high interest rates, leading to approximately $1 trillion in annual interest payments, enhance Bitcoin’s appeal as a hedge against inflation, potentially increasing its demand as a “store of value.” This dynamic is underscored by Bitcoin’s growing stock-to-flow ratio, which is anticipated to surpass that of gold (_[Fidelity](https://fwc.widen.net/s/7m292p96jw/1125481.1.0---fda-bitcoin-as-an-aspirational-store-of-value-revisited-v4)_).
+
+**2. Tax Season and Market Liquidity:**
+
+The combination of U.S. tax liabilities coming due on 4/15 and the Federal Reserve's quantitative tightening could exacerbate market liquidity issues, leading to potential broad-based sell-offs in the crypto space as noted by the _[Cofounder of BitMEX, Arthur Hayes.](https://www.coindesk.com/markets/2024/04/09/bitcoin-could-slump-around-reward-halving-time-arthur-hayes-says/)_
+
+**3. Demographic Shifts:**
+
+A significant demographic shift is underway as Millennials, who make up about 2% of U.S. millionaires, increasingly invest in digital assets. A 2023 CFA Institute study highlighted that Millennials hold a larger portion of their wealth in digital formats than previous generations, suggesting a shift in investment preferences towards cryptocurrencies, which could influence long-term demand dynamics _([Fidelity](https://fwc.widen.net/s/7m292p96jw/1125481.1.0---fda-bitcoin-as-an-aspirational-store-of-value-revisited-v4))._
+
+**4. Geopolitical Tensions:**
+
+Global instabilities, such as the Russia-Ukraine conflict and tensions between Israel and Iran, could impact market volatility and investment flows into cryptocurrencies. Recent studies, such as the one by [Khalfaoui et al. (2022)](https://www.sciencedirect.com/science/article/abs/pii/S1544612322005426), show that geopolitical crises can create significant volatility in cryptocurrency markets, affecting prices both in the short and long term.
+
+**5. Role of ETFs and Institutional Investments:**
+
+The landscape of Bitcoin investing is notably being reshaped by the entry of ETFs and large-scale institutional investments. Despite recent data from [Matrixport](https://www.matrixport.com/) showing a decline in U.S.-listed Bitcoin ETF inflows with over $319 million in net outflows, the overall potential for these financial products remains high.
+
+Institutions like [Coinbase](https://coinbase.bynder.com/m/79b91136e082c119/original/Monthly_2024-03_March-V2.pdf) and [21Shares](https://5994002.fs1.hubspotusercontent-na1.net/hubfs/5994002/21Shares_Bitcoin%20Halving%20and%20Beyond.pdf) posit that ETFs could majorly absorb sell pressure post-halving, providing a new source of steady demand that may stabilize or even increase Bitcoin's price. Moreover, the promotional efforts by major financial players such as [BlackRock](https://news.bitcoin.com/10-5-trillion-asset-manager-blackrock-explains-importance-of-bitcoin-halving/), and anticipated capital inflows from institutional sectors managing approximately $114 trillion globally hint at a significant bullish potential for Bitcoin's market cap in the near future.
+
+## **Post-halving Miner and Market Dynamics**
+
+Post-halving, the cost of mining Bitcoin is expected to increase significantly, with **CoinShares** projecting expenses to rise to between $27,900 and $37,800 per Bitcoin. This increase sets a new potential price floor and highlights the importance of monitoring mining operations for insights into market stability and supply constraints ([CoinShares Research](https://coinshares.com/research/2024-mining-report#executive_summary)).
+
+### **Miner Selling Dynamics:**
+
+**Reduction in Miner Selling**: **Galaxy Research** posits that halving reduces miners' sell pressure as they have already built up cash reserves to prepare for the halving event so their infrastructure remain competitive or engage in acquisitions or mergers. This pattern is evident in previous halvings (November 2012, July 2016, and May 2020) and might repeat in 2024 ([Galaxy](https://www.galaxy.com/insights/research/bitcoin-halving-digital-scarcity-in-action/)). This is supported by **CryptoQuant’s CEO**, who observes decreased selling from miners through reduced exchange inflow and outflow data ([CryptoQuant](https://x.com/ki_young_ju/status/1777258622277574969?s=46&t=gpoQUQO0wK7jxhCF4O8L_Q)).
+
+**Forced Selling by Miners**: Conversely, reduced block rewards compel miners to sell to cover expenses, making them "forced sellers," says **Bitwise's CIO, Hougan**. Miners are increasingly turning to equity or debt financing to sustain operations, as discussed in **Grayscale's** report ([Grayscale Report](https://www.grayscale.com/research/reports/2024-halving-this-time-its-actually-different)). Relocation to areas with cheaper energy costs is also a strategy being adopted to mitigate costs, per industry trends and **JPMorgan’s** analysis.
+
+### **Market Impact and Industry Consolidation**:
+
+**Industry Consolidation**: Financial pressure from the halving is expected to drive consolidation, favoring larger miners with the capacity to operate on thinner margins, according to **VanEck** ([VanEck Analysis](https://www.vaneck.com/us/en/blogs/digital-assets/matthew-sigel-bitcoin-halving-explained-history-impact-and-2024-predictions/#bitcoin-halving-what-to-expect)). This consolidation could influence the decentralization and dynamics of the Bitcoin network.
+
+**Changing Seller Dynamics**: The reduction in miner output will decrease the availability of Bitcoin from forced sellers (who are insensitive towards to selling price as miners always sell a portion of their block rewards for fiat to pay for operational expenses like energy, labor, debt, and new machines), thereby increasing reliance on willing sellers who may demand higher prices, leading to potential market volatility or upward buying pressure, as analyzed by **Bitwise** ([Bitwise Insights](https://experts.bitwiseinvestments.com/cio-memos/the-bitcoin-halving-the-real-change-no-one-is-talking-about)).
+
+## Traders **and Market Dynamics**
+
+**Futures Traders:**
+
+Funding Rate has turned negative since start of 2024 showing traders are willing to pay for opening and maintaining short positions ([CryptoQuant](https://cryptoquant.com/asset/btc/chart/derivatives/funding-rates?exchange=all_exchange&window=DAY&sma=0&ema=0&priceScale=log&metricScale=linear&chartStyle=column))
+
+**Long Term Holder Behavior:**
+
+The market's liquidity is increasingly influenced by the behavior of long-term holders (LTHs), who now retain nearly 70% of all circulating Bitcoin. This holding pattern suggests a more illiquid market which could stabilize prices in the face of supply shocks ([21Shares](https://5994002.fs1.hubspotusercontent-na1.net/hubfs/5994002/21Shares_Bitcoin%20Halving%20and%20Beyond.pdf)).
+
+**Market Value to Realized Value (MVRV) Ratio**
+
+This metric, which compares the current market price of Bitcoin to its realized price across all coins, suggests strong investor confidence. The MVRV ratio has averaged 2.4 over the past 30 days, notably higher than the 1.07 average observed during similar pre-halving periods in previous cycles. This elevated ratio indicates that investors are willing to pay premium prices for Bitcoin, suggesting an optimistic outlook on its value stability and growth potential ([21Shares](https://5994002.fs1.hubspotusercontent-na1.net/hubfs/5994002/21Shares_Bitcoin%20Halving%20and%20Beyond.pdf)).
+
+**Net Unrealized Profit and Loss (NUPL)**
+
+Another critical indicator, NUPL, helps gauge the overall market sentiment by differentiating between unrealized profit and loss within the market. Currently, the NUPL stands at 0.6, which is below the 'greed' level of 0.7 observed in 2021 but still substantially higher than the 0.42 average of previous halving events. This metric underscores a growing bullish sentiment among investors, further buoyed by the recent U.S. approval of a spot Bitcoin ETF which has attracted over $10 billion in capital and accumulated more than 400,000 BTC, reinforcing bullish market trends ([21Shares](https://5994002.fs1.hubspotusercontent-na1.net/hubfs/5994002/21Shares_Bitcoin%20Halving%20and%20Beyond.pdf)).
+
+## **On-Chain Indicators**
+
+**Exchange Reserve:**
+
+The decrease in Bitcoin's exchange balances to a five-year low signals a looming supply crunch, reinforcing bullish sentiment. ([21Shares](https://5994002.fs1.hubspotusercontent-na1.net/hubfs/5994002/21Shares_Bitcoin%20Halving%20and%20Beyond.pdf)).
+
+**On-Chain Activities and Their Implications:**
+
+Bitcoin's **Total Value Locked (TVL)** has also surged reaching 2.7 billion, marking a sevenfold increase in March alone, positioning Bitcoin among the top networks by TVL. This surge is indicative of a healthy and expanding ecosystem, potentially heralding a new era for Bitcoin's utility and investor interest post-halving.
+
+Additionally, the [introduction of ordinals](https://www.grayscale.com/research/market-commentary/market-byte-can-ordinals-unlock-new-potential-for-bitcoin) has revitalized the blockchain, constituting approximately 20% of total miner revenue and underscoring innovative use cases beyond simple transactions.
+
+## **Conclusion**
+
+While the foundational mechanics of Bitcoin halving remain constant—reducing the supply of new bitcoins to control inflation—the 2024 event is set against a backdrop of unique fiscal, demographic, and geopolitical factors. These elements introduce new variables that could significantly influence Bitcoin's traditional halving impact. Understanding these dynamics requires a multifaceted approach, blending traditional financial analysis with insights from contemporary global trends.

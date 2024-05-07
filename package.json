@@ -14,12 +14,12 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.2.1",
-    "@docusaurus/plugin-google-gtag": "^3.2.1",
-    "@docusaurus/plugin-google-tag-manager": "^3.2.1",
-    "@docusaurus/plugin-ideal-image": "^3.2.1",
-    "@docusaurus/plugin-vercel-analytics": "^3.2.1",
-    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/core": "^3.2.2",
+    "@docusaurus/plugin-google-gtag": "^3.2.2",
+    "@docusaurus/plugin-google-tag-manager": "^3.2.2",
+    "@docusaurus/plugin-ideal-image": "^3.2.2",
+    "@docusaurus/plugin-vercel-analytics": "^3.2.2",
+    "@docusaurus/preset-classic": "^3.2.2",
     "@easyops-cn/docusaurus-search-local": "latest",
     "@mdx-js/react": "^3.0.0",
     "@radix-ui/react-accordion": "^1.1.2",
