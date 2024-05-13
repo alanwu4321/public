@@ -3,7 +3,7 @@
 These are 3 IPs to Whitelist for your Exchange API settings
 
 ```
-35.234.241.52 35.203.55.44 34.95.27.45
+35.76.190.36 18.181.45.150 35.76.13.197 35.76.249.2 57.180.136.100
 ```
 
 You can view how to set up IP Whitelist for each exchanges below 👇

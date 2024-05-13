@@ -14,7 +14,7 @@ Create and Setup API Key
 
 <Image img={require('/img/trader/binance/create_api.png')} />
 
-💡 Copy and paste the whitelist IP `35.234.241.52 35.203.55.44 34.95.27.45` and hit Confirm
+💡 Copy and paste the whitelist IP `35.76.190.36 18.181.45.150 35.76.13.197 35.76.249.2 57.180.136.100` and hit Confirm
 
 <Image img={require('/img/trader/binance/restrict.png')} />
 
