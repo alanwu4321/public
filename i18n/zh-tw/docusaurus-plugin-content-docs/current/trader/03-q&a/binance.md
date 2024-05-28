@@ -18,13 +18,13 @@ import Image from '@theme/IdealImage';
 
 <Image img={require('/img/trader/binance/create_api.png')} />
 
-💡 複製並貼上白名單 IP ```35.234.241.52 35.203.55.44 34.95.27.45```，然後點擊確認
+💡 複製並貼上白名單 IP `35.76.190.36 18.181.45.150 35.76.13.197 35.76.249.2 57.180.136.100`，然後點擊確認
 
 <Image img={require('/img/trader/binance/restrict.png')} />
 
 <Image img={require('/img/trader/binance/confirm.png')} />
 
-💡 啟用 ```Enable Spot & Margin Trading``` 以及 ```Enable Futures```
+💡 啟用 `Enable Spot & Margin Trading` 以及 `Enable Futures`
 
 <Image img={require('/img/trader/binance/enable_spot.png')} />
 
@@ -32,13 +32,13 @@ import Image from '@theme/IdealImage';
 
 錢包設置
 
-💡 點擊 ```Wallet``` 並選擇 ```Futures```
+💡 點擊 `Wallet` 並選擇 `Futures`
 
 <Image img={require('/img/trader/binance/wallet.png')} />
 
 <Image img={require('/img/trader/binance/futures.png')} />
 
-💡 檢查是否有足夠的餘額在 ```USD-M``` ，如果不足，點擊 ```Transfer```
+💡 檢查是否有足夠的餘額在 `USD-M` ，如果不足，點擊 `Transfer`
 
 <Image img={require('/img/trader/binance/USD-M.png')} />
 
@@ -54,18 +54,8 @@ import Image from '@theme/IdealImage';
 
 <Image img={require('/img/trader/binance/preference.png')} />
 
-💡倉位模式設置為 ```Hedge position mode``` 。請注意，當您有任何持倉或待成交訂單時，無法調整倉位模式。
+💡 倉位模式設置為 `Hedge position mode` 。請注意，當您有任何持倉或待成交訂單時，無法調整倉位模式。
 
-💡資產模式設置為 ```Single-Asset mode``` 。請注意，當您有任何持倉或待成交訂單時，無法調整資產模式。
+💡 資產模式設置為 `Single-Asset mode` 。請注意，當您有任何持倉或待成交訂單時，無法調整資產模式。
 
 <Image img={require('/img/trader/binance/single_assets.png')} />
-
-
-
-
-
-
-
-
-
-
