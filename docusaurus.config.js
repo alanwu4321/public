@@ -134,6 +134,11 @@ module.exports = {
           label: 'Status',
           position: 'right',
         },
+        {
+          href: 'https://ai.crypto-arsenal.io/',
+          label: 'AI Chatbot',
+          position: 'right',
+        },
       ],
     },
     footer: {
