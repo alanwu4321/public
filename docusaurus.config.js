@@ -174,7 +174,7 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/MCryptoarsenal',
+              href: 'https://twitter.com/Cryptoarsena1',
             },
             {
               label: 'Medium',
